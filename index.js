@@ -20,6 +20,12 @@ if (process.env.SSL_CERT_PATH && process.env.SSL_KEY_PATH) {
 const app = Fastify(options);
 
 app.get('/', (request, reply) => {
+  console.log('GET /');
+  reply.send({ message: 'Hello World!' });
+});
+
+app.post('/', (request, reply) => {
+  console.log(request.body);
   reply.send({ message: 'Hello World!' });
 });
 
