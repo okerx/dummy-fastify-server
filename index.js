@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const fs = require('node:fs');
 const Fastify = require('fastify');
+const cors = require('@fastify/cors');
 
 /** @type import('fastify').FastifyServerOptions */
 const options = { logger: true };
@@ -31,6 +32,7 @@ app.post('/', (request, reply) => {
 
 (async () => {
   try {
+    await app.register(cors, { origin: '*' });
     // Starting the server and listening on port 3000 or the port specified in the PORT environment variable
     // host '::' makes the server listen on all available network interfaces, including both IPv4 and IPv6
     await app.listen({
