@@ -4,7 +4,7 @@ Super simple HTTP server using Fastify for testing purposes
 ## Installation
 
 ```bash
-yarn
+pnpm install
 ```
 with npm
 ```bash
@@ -14,7 +14,7 @@ npm install
 ### Start the server
 
 ```bash
-yarn start
+pnpm start
 ```
 with npm
 ```bash
@@ -25,7 +25,7 @@ This will start the server on port 3000.
 
 ### Run in watch mode
 ```bash
-yarn dev
+pnpm dev
 ```
 with npm
 ```bash
