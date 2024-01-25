@@ -1,8 +1,9 @@
 require('dotenv').config();
 
-const fs = require('fs');
+const fs = require('node:fs');
 const Fastify = require('fastify');
 
+/** @type import('fastify').FastifyServerOptions */
 const options = { logger: true };
 if (process.env.SSL_CERT_PATH && process.env.SSL_KEY_PATH) {
   options.http2 = true;
