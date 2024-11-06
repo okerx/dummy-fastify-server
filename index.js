@@ -22,7 +22,7 @@ const app = Fastify(options);
 
 app.get('/', (request, reply) => {
   console.log('GET /');
-  reply.send({ message: 'Hello World!' });
+  reply.send({ message: 'Hello, demo!' });
 });
 
 app.post('/', (request, reply) => {
